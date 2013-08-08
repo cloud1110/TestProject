@@ -1,0 +1,25 @@
+body{overflow-x:hidden;background:transparent }
+div.paper-render {font-size:13px;max-width:99%;margin:auto;margin-left:15px;}
+div.paper-render.no-exam-section{margin:0;font-size: 13px;}
+div.paper-render span.group-name {font-size:20px; font-weight:bold; }
+div.paper-render .item{margin:0 35px}
+div.group {margin-top:10px; padding-top:5px;}
+div.group span.stat {margin-left: 15px; font-size:12px}
+div.group span.stat .number {color:red;font-size:18px;margin:0 5px}
+
+div.header {font-weight:bold;font-size:15px;}
+div.header >span {margin-right:120px}
+div.item-render {margin:10px 20px;font-size:12px}
+div.item-render div.header{border-bottom: 1px solid #e1e1e8;}
+div.item-render table3{font-size:12px; width:80%;border:0 solid; margin:10px 0;}
+div.item-render table3 td{border-bottom: 1px solid #e1e1e8;}
+div.item-render table3 tr.header{font-weight:bold;font-size:13px;margin:10px}
+span.item-score {color:red;font-size:20px;margin-right:2px}
+div.answer {text-align:right; margin:5px 0;}
+div.answer2 {text-align:text; margin:5px 0;}
+div.answer span {color:red;font-size:18px;margin-right:2px}
+span.option-id {font-size:14px;margin-right:12px;}
+div.options {margin:5px 0}
+a.back{font-size:12px;font-weight:normal}
+.no-exam-section-tip{display:none}
+.no-exam-section .no-exam-section-tip{display:block;color:red;text-align:center;height:80px;vertical-align:middle;padding-top:40px;}
