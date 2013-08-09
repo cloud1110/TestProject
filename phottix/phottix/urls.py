@@ -8,6 +8,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     url(r'^login/$', django_auth.login, name='login'),
+    url(r'^home/$', 'core.views.home', name='home'),
     # url(r'^$', 'phottix.views.home', name='home'),
     # url(r'^phottix/', include('phottix.foo.urls')),
 
@@ -17,4 +18,7 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
     url(r'^product/', include('product.urls')),
+    
+
+    
 )

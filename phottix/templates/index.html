@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-    <title>{% if user.project.title   %}{{ user.project.title   }}{% else  %}Xuancai{% endif  %}</title>
+    <title>{% if user.project.title   %}{{ user.project.title   }}{% else  %}Phottix{% endif  %}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
 
@@ -75,14 +75,10 @@
 		</div>
         <div class="logo_ata">
             <div  class="container-fluid">
- 			{%  if user.project.banner  %}
-                    {{ user.project.banner|safe  }}
-                {% else  %}
-                <a class="brand" href="{% url 'home'  %}"> <img alt="ATA Logo" style="width:auto;height:auto;vertical-align: middle;"   src
-="{%  if user.project.logo  %}{{ MEDIA_URL  }}logo/{{  user.project.logo_name  }}{%  else %}{{ STATIC_URL  }}img/logo.png{% endif  %}" /> <span style="line-hei
-ght:{% if user.project.logo  %}{{  user.project.logo.height  }}px{% endif   %}">{% if user.project.title   %}{{ user.project.title   }}{% else  %}Xuancai{% endif  %}</span></a>
-                {%  endif  %}
-
+                <a class="brand" href="{% url 'product'  %}"> 
+                	<img alt="Phottix Logo" style="width:auto;height:auto;vertical-align: middle;"src="{{ STATIC_URL  }}img/logo.png" />
+                	<span>Phottix</span>
+                </a>
             </div>
         </div>
 	</div>
@@ -96,11 +92,7 @@ ght:{% if user.project.logo  %}{{  user.project.logo.height  }}px{% endif   %}">
                     <div class="well nav-collapse sidebar-nav" id="sidebar_radius0" style="height:auto">
                         <ul class="nav nav-tabs nav-stacked main-menu" id="navicon">
                             <li class="nav-header hidden-tablet"></li>
-                            <li class="{% active request 'user' %}"><a class="ajax-link" href="{% url 'ucenter' %}"><span class="hidden-tablet"> 用户管理</span><i class="icon-user pull-right"></i></a></li>
-                            <li class="{% active request 'paper' %}"><a class="ajax-link" href="{% url 'paper'  %}"><span class="hidden-tablet">试卷管理</span><i class="icon-paper pull-right "></i></a></li>
-                            <li class="{% active request 'session' %}"><a class="ajax-link" href="{% url 'session'  %}"><span class="hidden-tablet"> 考试管理</span><i class="icon-exam pull-right"></i></a></li>
-                            <li class="{% active request 'entry' %}"><a class="ajax-link" href="{% url 'examentry'  %}"><span class="hidden-tablet"> 报名管理</span><i class="icon-enroll  pull-right"></i></a></li>
-                            <li class="{% active request 'score'  %}"><a class="ajax-link" href="{% url 'score'  %}"><span class="hidden-tablet"> 成绩管理</span><i class="icon-score pull-right"></i></a></li>
+                            <li class="{% active request 'product' %}"><a class="ajax-link" href="{% url 'product' %}"><span class="hidden-tablet"> 产品管理</span><i class="icon-paper pull-right"></i></a></li>
                         </ul>
                     </div><!--/.well -->
                 </div><!--/span-->
@@ -125,30 +117,10 @@ ght:{% if user.project.logo  %}{{  user.project.logo.height  }}px{% endif   %}">
 			<div class="row-fluid">
 				<div class="box span4">
 					<div class="box-header well" data-original-title>
-						<h2><i class="icon-list"></i> 已报名测试人次</h2>
+						<h2><i class="icon-list"></i> 产品总数</h2>
 					</div>
 					<div class="box-content buttons">
-						已报名测试人次：{{entrysnumber}}人
-					</div>
-				</div><!--/span-->
-					
-				<div class="box span4">
-					<div class="box-header well" data-original-title>
-						<h2><i class="icon-list"></i> 当前试卷数</h2>
-					</div>
-					<div class="box-content buttons">
-						当前试卷数：{{papersnumber}}张。
-					</div>
-				</div><!--/span-->
-
-				<div class="box span4">
-					<div class="box-header well" data-original-title>
-						<h2><i class="icon-list"></i> 活动场次数</h2>
-					</div>
-					<div class="box-content buttons">
-						已发布活动场次数：{{pub_se_num}}场<br/>
-
-						未发布活动场次数：{{unpub_se_num}}场
+						已存入产品数
 					</div>
 				</div><!--/span-->
 			</div><!--/row-->
@@ -157,15 +129,9 @@ ght:{% if user.project.logo  %}{{  user.project.logo.height  }}px{% endif   %}">
 			<!-- content ends -->
 			</div><!--/#main-box -->
 				</div><!--/fluid-row-->
-				
-		
-        <footer>
-                    {%  if user.project.footer  %}
-                    {{  user.project.footer|safe }}
-                    {% else  %}
-                               <p class="pull-right">&copy; <a href="http://www.ata.net.cn" target="_blank">ATA</a> 2013</p>
-                    {%  endif  %}
 
+        <footer>
+<p class="pull-right">&copy; <a href="http://www.phottix.cn" target="_blank">phottix</a> 2013</p>
 		</footer>
 		
 	</div><!--/.fluid-container-->
