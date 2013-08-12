@@ -3,7 +3,7 @@
 from django.contrib.auth.models import Permission
 from django.db.models.signals import post_syncdb
 from django.contrib.contenttypes.models import ContentType
-from core import models
+from product import models
 
 def __initial_permission(sender, **kwargs):
     print 'create predefine permssion'

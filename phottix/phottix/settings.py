@@ -130,6 +130,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'core',
     'product',
+    'bootstrap_toolkit',
+    'bootstrap-pagination',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
