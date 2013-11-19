@@ -10,7 +10,7 @@ from django.shortcuts import get_object_or_404
 from django.http import HttpResponse,HttpResponseRedirect
 from django.core.paginator import Paginator,PageNotAnInteger,EmptyPage
 
-@login_required
+
 def product (request):
     keyword = request.GET.get('keyword','') 
     page_size = int(request.GET.get('page_size',PAGE_SIZE))

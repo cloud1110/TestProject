@@ -21,5 +21,5 @@ class CGroup(Group):
 
     class Meta:
         db_table = 'tcgroup'
-        verbose_name        = _('group')
+        verbose_name  = _('group')
         verbose_name_plural = _('group')

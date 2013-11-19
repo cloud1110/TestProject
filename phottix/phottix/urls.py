@@ -8,7 +8,9 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     url(r'^login/$', django_auth.login, name='login'),
+    url(r'^logout/$',django_auth.logout_then_login, name= 'logout_then_login'),
     url(r'^home/$', 'core.views.home', name='home'),
+
     # url(r'^$', 'phottix.views.home', name='home'),
     # url(r'^phottix/', include('phottix.foo.urls')),
 
