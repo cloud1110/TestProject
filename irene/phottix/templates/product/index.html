@@ -1,0 +1,82 @@
+{% extends "index.html"  %}
+{% load bootstrap_pagination %}
+
+{% block content %}
+<!-- content starts -->
+
+<div>
+	<ul class="breadcrumb">
+		<li>
+        <a href="{% url 'home'  %}">首页</a> <span class="divider">|</span>
+		</li>
+		<li>
+            <a href="{% url 'session'  %}">产品管理</a>
+		</li>
+	</ul>
+</div>
+	        <div class="box">
+                <div class="span10">
+                    <form class="navbar-search pull-left"  action="{% url 'product'  %}" method="GET" id="navbar-search-ml0">
+                        {% csrf_token %}
+                        <input type="text" name="keyword" value="{{ keyword  }}" placeholder="按名称搜索" aria-controls="DataTables_Table_0">
+                    <button class="btn btn-primary btn-search" type="submit"><i class="icon-search icon-white"></i>搜索</button>
+                    </form>
+                
+                </div>
+			    <div class="span2 span-align-right">
+                    <a class="btn btn-add" href="{% url 'create-product'  %}">
+							<i class="icon-add-exam icon-white"></i>
+							新建产品
+						</a>
+                    </div>
+				
+				
+            </div><!--搜索+添加按钮-->
+
+			<div class="row-fluid">
+				<div class="box span12">
+					<div>
+			<table class="table">
+			  <thead>
+				  <tr>
+					  <th style="width: 199px;">英文名</th>
+					  <th style="width: 198px;">中文名</th>
+					  <th style="width: 95px;"></th>
+					  <th style="width: 375px;">操作</th>
+				  </tr>
+			  </thead>   
+			  <tbody>
+                  {% for product in product_list  %}
+				<tr>
+                    <td>{{ product.cn_name   }}</td>
+                    <td class="center">{{ session.paper.name  }}</td>
+					<td class="center">
+                        {{ session.start_time }}
+					</td>
+					<td class="center">
+                        <a class="btn btn-edit" href="{% url 'edit-product' product.id  %}">
+							<i class="icon-white icon-edit"></i>  
+                            编辑
+						</a>
+                        <a class="btn btn-delete" href="{%  url 'del-product' product.id %}">
+							<i class="icon-white icon-delete"></i>  
+							删除                                            
+						</a>
+					</td>
+				</tr>
+                {% endfor %}
+			  </tbody>
+		  </table>            
+
+          <!-- paginater begins  -->
+                  <div class="dataTables_info" id="DataTables_Table_0_info">共{{ total }}条记录</div>
+              <div class="pagination-centered pagination">
+                {% bootstrap_paginate session_list range=10 show_prev_next="true" show_first_last="true" %}
+            </div>
+          <!-- paginater ends  -->
+
+		</div>
+	</div><!--/span-->
+</div><!--/row-->
+
+{% endblock  %}

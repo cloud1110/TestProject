@@ -1,0 +1,55 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-06-28 16:01+0800\n"
+"PO-Revision-Date: 2013-06-26 09:36+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: admin.py:21 models.py:45
+msgid "project"
+msgstr ""
+
+#: forms.py:22 profile.html:28
+msgid "User name"
+msgstr "姓名"
+
+#: forms.py:23 profile.html:32
+msgid "email address"
+msgstr "电子邮件地址"
+
+#: forms.py:31
+msgid "New password"
+msgstr "新密码"
+
+#: profile.html:24
+msgid "Account"
+msgstr "帐号"
+
+#: profile.html:36 profile.html.py:47
+msgid "Change profile"
+msgstr "编辑个人信息"
+
+#: profile.html:37 profile.html.py:70
+msgid "Change password"
+msgstr "修改密码"
+
+#: profile.html:58 profile.html.py:81
+msgid "Save"
+msgstr "保存"
+
+#: profile.html:59 profile.html.py:82
+msgid "Cancel"
+msgstr "取消"

@@ -1,0 +1,8 @@
+.center{text-align:center;} 
+.right{text-align:right}
+.table td{vertical-align: middle}
+.nowrap{white-space:nowrap}
+td span.btn-groups {white-space:nowrap;width: auto;text-align: center;display:inline-block;margin:3px 0;}
+.table {word-break:break-all;min-width:720px;}
+td.wrap{white-space:normal;word-break:break-all;}
+td.wrap.op-buttons{width:170px;min-width:170px;}
